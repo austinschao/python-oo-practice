@@ -24,6 +24,7 @@ class SerialGenerator:
 
     def __init__(self, start):
         """Constructing a serial generator"""
+
         self.start = start
         SerialGenerator.start_number = start
 
@@ -33,9 +34,11 @@ class SerialGenerator:
         if SerialGenerator.start_number == self.start:
             SerialGenerator.start_number += 1
             return self.start
+
         SerialGenerator.start_number += 1
         return SerialGenerator.start_number - 1
 
     def reset(self):
         """Reset start number to original val"""
+
         SerialGenerator.start_number = self.start
